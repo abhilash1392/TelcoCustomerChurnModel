@@ -35,12 +35,26 @@ Please look at the file notebooks/eda.ipynb to view exploratory data analysis, d
 
 ## Result
 
-Fold --> 0 | AUC Score --> 0.841
+### Using LabelEncoder and RandomForest
 
-Fold --> 1 | AUC Score --> 0.846
+Fold --> 0 | AUC Score --> 0.837
 
-Fold --> 2 | AUC Score --> 0.848
+Fold --> 1 | AUC Score --> 0.836
 
-Fold --> 3 | AUC Score --> 0.858
+Fold --> 2 | AUC Score --> 0.837
 
-Fold --> 4 | AUC Score --> 0.835
+Fold --> 3 | AUC Score --> 0.844
+
+Fold --> 4 | AUC Score --> 0.874
+
+### Using OneHotEncoder and RandomForest
+
+Fold --> 0 | AUC Score --> 0.837
+
+Fold --> 1 | AUC Score --> 0.835
+
+Fold --> 2 | AUC Score --> 0.839
+
+Fold --> 3 | AUC Score --> 0.844
+
+Fold --> 4 | AUC Score --> 0.872

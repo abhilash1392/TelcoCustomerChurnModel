@@ -18,7 +18,7 @@ def run(fold):
     df = df.sample(frac=1).reset_index(drop=True)
 
     # Encoding the columns 
-    columns = [c for c in df.columns if c not in ('customerID','PhoneService','gender','Dependents',       'Partner','StreamingMovies','StreamingTV','Churn')]
+    columns = [c for c in df.columns if c not in ('customerID','PhoneService','gender','Dependents','Partner','StreamingMovies','StreamingTV','Churn','kfold')]
     categoricalColumns = [c for c in columns if df[c].dtype =='object']
     numericalColumns = [c for c in columns if df[c].dtype !='object']
     for c in columns:
@@ -46,8 +46,9 @@ def run(fold):
 
     joblib.dump(rf,f'../models/dt_{fold}.bin')
 
+    print(columns)
 
-
+    
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--fold',type=int)

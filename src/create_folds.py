@@ -1,6 +1,7 @@
 # src/create_folds.py 
 
-import numpy as np 
+import numpy as np
+from numpy.lib.index_tricks import _fill_diagonal_dispatcher 
 import pandas as pd 
 from  sklearn.model_selection import StratifiedKFold 
 
@@ -34,10 +35,8 @@ if __name__ == "__main__":
 
     
     # saving the new dataframe 
-    df.to_csv('../input/data_folds.csv')
+    df.to_csv('../input/data_folds.csv',index=False)
 
     print('Done Done Done')
 
      
-
-    
